@@ -2,7 +2,7 @@
 
 Official repository for **RUBRIC-ARROW: Alternating Pointwise Rubric Reward Modeling for LLM Post-training in Non-verifiable Domains**.
 
-[[Paper]](https://arxiv.org/abs/2605.29156)
+[[Paper]](https://arxiv.org/abs/2605.29156)[[Model]](https://huggingface.co/OpenRubrics/RubricARROW)
 
 ## Overview
 
