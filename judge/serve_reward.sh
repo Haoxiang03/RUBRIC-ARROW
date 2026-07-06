@@ -1,0 +1,15 @@
+set -e
+
+export REWARD_SERVER_HOST=127.0.0.1
+export REWARD_SERVER_PORT=8000
+
+export VLLM_HOST_IP=127.0.0.1
+export VLLM_SERVER_PORT=8010
+
+export REWARD_MAX_NEW_TOKENS=1024
+export REWARD_JUDGE_WORKERS=6
+export REWARD_JUDGE_CHUNK_SIZE=16
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
+CUDA_VISIBLE_DEVICES=1 python "$SCRIPT_DIR/reward_server.py"
