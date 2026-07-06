@@ -24,7 +24,7 @@ DATASET_PATH="${DATASET_PATH:-$DATA_ROOT/judge/iter1.jsonl}"
 OUTPUT_DIR="${OUTPUT_DIR:-$REPO_ROOT/outputs/judge/qwen3_8b_judge_grpo_iter1}"
 PLUGIN_PATH="${PLUGIN_PATH:-$SCRIPT_DIR/reward_plugin.py}"
 
-CUDA_VISIBLE_DEVICES=2,3,4,5,6,7 \
+CUDA_VISIBLE_DEVICES=1,2,3,4,5,6 \
 NPROC_PER_NODE=6 \
 swift rlhf \
   --rlhf_type grpo \
