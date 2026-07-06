@@ -1,0 +1,21 @@
+set -e
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+
+export REWARD_SERVER_HOST=127.0.0.1
+export REWARD_SERVER_PORT=8000
+
+export JUDGE_VLLM_HOST_IP=127.0.0.1
+export JUDGE_VLLM_SERVER_PORT=8011
+
+export REWARD_TIMEOUT=300
+export REWARD_MAX_NEW_TOKENS=1024
+export REWARD_JUDGE_WORKERS=6
+export REWARD_JUDGE_CHUNK_SIZE=16
+export REWARD_JUDGE_TEMPERATURE=0.0
+export REWARD_JUDGE_TOP_P=1.0
+export REWARD_LOGPROBS=10
+export REWARD_JUDGE_LOG_PATH="${REWARD_JUDGE_LOG_PATH:-$REPO_ROOT/outputs/judge.jsonl}"
+
+python "$SCRIPT_DIR/reward_server.py"
