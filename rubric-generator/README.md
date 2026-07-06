@@ -28,7 +28,7 @@ Start the rubric generator policy:
 ```bash
 CUDA_VISIBLE_DEVICES=0 \
 MODEL_PATH=/path/to/generator \
-./scripts/serve_policy.sh
+./serve_policy.sh
 ```
 
 Start the independent rubric judge:
@@ -36,13 +36,13 @@ Start the independent rubric judge:
 ```bash
 CUDA_VISIBLE_DEVICES=1 \
 JUDGE_MODEL_PATH=/path/to/judge \
-./scripts/serve_judge.sh
+./serve_judge.sh
 ```
 
 Start the CPU reward API:
 
 ```bash
-./scripts/serve_reward.sh
+./serve_reward.sh
 ```
 
 Start training on a separate GPU allocation:
@@ -52,5 +52,5 @@ CUDA_VISIBLE_DEVICES=2,3,4,5,6,7 \
 NPROC_PER_NODE=6 \
 MODEL_PATH=/path/to/generator \
 OUTPUT_DIR=/path/to/output \
-./scripts/train.sh
+./train.sh
 ```
