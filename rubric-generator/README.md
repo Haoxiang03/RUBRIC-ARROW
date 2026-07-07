@@ -4,13 +4,9 @@ GRPO training code for generating universal response rubrics.
 
 ## Data
 
-Three training iterations are included:
+Our training data comes from [OpenRubrics](https://huggingface.co/OpenRubrics). The processed data is evenly split into three subsets, which are used for the three alternating training iterations respectively. We apply several transformations to convert the original data into our training format.
 
-- `../datasets/rubric-generator/iter1.jsonl`
-- `../datasets/rubric-generator/iter2.jsonl`
-- `../datasets/rubric-generator/iter3.jsonl`
-
-Records use this schema:
+Each training example follows the format below:
 
 ```json
 {
