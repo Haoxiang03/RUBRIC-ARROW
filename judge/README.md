@@ -4,24 +4,30 @@ GRPO training code for a rubric-based pointwise judge.
 
 ## Data
 
-Three training iterations are included:
+## Data
 
-- `../datasets/judge/iter1.jsonl`
-- `../datasets/judge/iter2.jsonl`
-- `../datasets/judge/iter3.jsonl`
+## Data
 
-Records contain these fields:
+Our training data comes from [OpenRubrics](https://github.com/OpenRubrics/OpenRubrics). We apply several transformations to convert the original data into our training format. The processed data is evenly split into three subsets, which are used for the three alternating training iterations respectively.
+
+Each training example follows the format below:
 
 ```json
 {
-  "messages": [{"role": "user", "content": "judge prompt"}],
+  "messages": [
+    {
+      "role": "user",
+      "content": "judge prompt"
+    }
+  ],
   "original_prompt": "request answered by the preference pair",
   "chosen": "preferred response",
   "rejected": "non-preferred response",
-  "rubrics": ["1. ... [Hard Rule]\n2. ... [Principle]"],
-  "tag": "chosen"
+  "rubrics": [
+    "1. ... [Hard Rule]\n2. ... [Principle]"
+  ],
+  "tag": "chosen or rejected"
 }
-```
 
 ## Run
 
