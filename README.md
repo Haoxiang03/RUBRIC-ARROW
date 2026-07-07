@@ -23,6 +23,16 @@ This repository is built on the `ms-swift` training framework.
 
 Please install `ms-swift` following the official instructions before running training scripts.
 
+## Alternating Training
+
+The alternating training loop consists of the following steps:
+
+1. Train or SFT warm up a rubric-conditioned pairwise judge.
+2. Train the rubric generator, where the judge serves as the external reward model.
+3. Construct judge-training prompts with the latest rubrics and preference labels.
+4. Train the judge model.
+5. Repeat with the newly updated checkpoints.
+
 ## Citation
 
 If you find this repository useful, please cite our paper:
