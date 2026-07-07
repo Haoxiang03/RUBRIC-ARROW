@@ -4,7 +4,7 @@ Training code for optimizing an answer model with rubric-based rewards.
 
 ## Data
 
-Training JSONL records use this schema:
+Our training data comes from [OpenRubrics](https://huggingface.co/OpenRubrics). We apply several transformations to convert the original data into our training format.
 
 ```json
 {
