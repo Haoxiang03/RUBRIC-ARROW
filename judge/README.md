@@ -4,7 +4,7 @@ GRPO training code for a rubric-based pointwise judge.
 
 ## Data
 
-Our training data comes from [OpenRubrics](https://huggingface.co/OpenRubrics). We apply several transformations to convert the original data into our training format. The processed data is evenly split into three subsets, which are used for the three alternating training iterations respectively.
+Our training data comes from [OpenRubrics](https://huggingface.co/OpenRubrics). The processed data is evenly split into three subsets, which are used for the three alternating training iterations respectively. We apply several transformations to convert the original data into our training format.
 
 Each training example follows the format below:
 
