@@ -62,10 +62,10 @@ def create_pointwise_judge_prompt(conversation: str, rubric_items: str) -> str:
 Your job is to look at a conversation and a set of rubric items, and score the last turn (i.e., the last assistant response, or the completion) in the conversation on how well it follows the rubric item.
 
 # Conversation
-<<conversation>>
+{conversation}
 
 # Rubric item
-<<rubric_item>>
+{rubric_items}
 
 # Instructions
 Return a json object. For each rubric item i (starting from 1), keys must be exactly "explanation_i" and "criteria_met_i" for each i and it includes two top-level fields in the JSON object:
@@ -74,13 +74,13 @@ Return a json object. For each rubric item i (starting from 1), keys must be exa
 - One important exception to the above bullet point is that if a criteria says "such as", "for example", or "including", the response does not have to include all of the examples listed to meet the criteria.
 
 # Final Output Format (a single JSON object, not an array)
-{
+{{
   "explanation_1": "...",
   "criteria_met_1": true/false,
   "explanation_2": "...",
   "criteria_met_2": true/false,
   ... repeat this pattern for every rubric item i in order (i = 1, 2, 3, ...)
-}
+}}
 
 # Final instruction
 Return just the json object. Do not include any other text in the response.
