@@ -15,9 +15,9 @@ Records use this schema:
 ```json
 {
   "messages": [{"role": "user", "content": "rubric generation prompt"}],
-  "original_prompt": "request answered by the preference pair",
   "chosen": "preferred response",
-  "rejected": "non-preferred response"
+  "rejected": "non-preferred response",
+  "original_prompt": "request answered by the preference pair",
 }
 ```
 
