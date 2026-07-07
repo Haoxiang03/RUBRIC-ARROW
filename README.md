@@ -10,9 +10,9 @@ RUBRIC-ARROW is a rubric-based reward modeling framework for evaluating and impr
 
 The repository includes data and code for three components of RUBRIC-ARROW:
 
-- **Rubric generator training**: data and scripts for learning to generate evaluation criteria.
-- **Rubric-conditioned judge training**: data and scripts for learning to score responses based on generated rubrics.
-- **RLHF training**: preference/post-training data and scripts for optimizing LLMs with the rubric-based reward model.
+- **Rubric-conditioned judge training**: codebase for learning to score responses based on generated rubrics.
+- **Rubric generator training**: codebase for learning to generate evaluation criteria.
+- **RLHF training**: codebase for optimizing LLMs with the rubric-based reward model.
 
 ## Environment
 
