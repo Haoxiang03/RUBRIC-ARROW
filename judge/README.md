@@ -15,7 +15,7 @@ Records contain these fields:
 ```json
 {
   "messages": [{"role": "user", "content": "judge prompt"}],
-  "original_prompt": "the prompt answered by the chosen and rejected responses",
+  "original_prompt": "request answered by the preference pair",
   "chosen": "preferred response",
   "rejected": "non-preferred response",
   "rubrics": ["1. ... [Hard Rule]\n2. ... [Principle]"],
